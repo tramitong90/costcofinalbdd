@@ -1,5 +1,2 @@
-stepDefinition\CostcoHomepage.class
 stepDefinition\CostcoSearchBox.class
-stepDefinition\AddToList.class
 stepDefinition\MyRunner.class
-stepDefinition\RemoveLastItemFromCart.class

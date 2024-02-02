@@ -1,7 +1,9 @@
+
 package stepDefinition;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,15 +29,25 @@ public class CostcoHomepage {
 
 	@When("user clicks on {string} menu")
 	public void user_clicks_on_menu(String string) {
-		driver.findElement(By.id(string)).click();;
+		driver.findElement(By.id(string)).click();
+		;
 	}
 
 	@Then("user is brought to the  {string} page")
 	public void user_is_brought_to_the_page(String string) throws InterruptedException {
-		String currentPage = driver.getCurrentUrl();
-		//Thread.sleep(5000);
+		String currentPage = driver.getCurrentUrl(); // Thread.sleep(5000);
 		assertEquals(currentPage, string);
-		
-		driver.close();
+
+		driver.quit();
 	}
+
+	@AfterClass
+	public void closebrowser() {
+		try {
+			System.out.println("Test 2 ");
+			driver.close();
+		} catch (Exception e) {
+		}
+	}
+
 }
