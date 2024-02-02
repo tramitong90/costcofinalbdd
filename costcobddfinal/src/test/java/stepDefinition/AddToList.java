@@ -43,7 +43,7 @@ public class AddToList {
 
 	@When("opens shopping cart")
 	public void opens_shopping_cart() {
-		WebDriverWait wait2 = new WebDriverWait(driver, 10); // 20 sec
+		WebDriverWait wait2 = new WebDriverWait(driver, 20); // 20 sec
 		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='cart-d']/div/div")));
 		driver.findElement(By.xpath("//a[@id='cart-d']/div/div")).click();
 	}

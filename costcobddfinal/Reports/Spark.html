@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 1, 2024 02:28:05 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 1, 2024 10:07:35 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -77,7 +72,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -91,25 +85,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">feature to add to wishlist</p>
             <p class="text-sm">
-              <span>14:28:05 PM</span> / <span>00:19:121</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>22:07:36 PM</span> / <span>00:48:403</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">feature to add to wishlist</h5>
-<span class='badge badge-success'>02.01.2024 14:28:05</span>
-<span class='badge badge-danger'>02.01.2024 14:28:24</span>
-<span class='badge badge-default'>00:19:121</span>
+<h5 class="test-status text-pass">feature to add to wishlist</h5>
+<span class='badge badge-success'>02.01.2024 22:07:36</span>
+<span class='badge badge-danger'>02.01.2024 22:08:24</span>
+<span class='badge badge-default'>00:48:403</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -119,10 +113,10 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Validate add to wishlist link in the shopping cart is working</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validate add to wishlist link in the shopping cart is working</div>
       </div>
     </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
               <div class="step pass-bg" title="stepDefinition.AddToList.user_is_on_costco_main_page()">
                 <span>Given User is on Costco main page</span>
@@ -139,95 +133,19 @@
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="stepDefinition.AddToList.opens_shopping_cart()">
+              <div class="step pass-bg" title="stepDefinition.AddToList.opens_shopping_cart()">
                 <span>And opens shopping cart</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@id='cart-d']/div/div (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at stepDefinition.AddToList.opens_shopping_cart(AddToList.java:47)
-	at ✽.opens shopping cart(file:///C:/Users/mitra/eclipse-workspace/costcobddfinal/src/test/resources/Features/AddToList.feature:6)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='cart-d']/div/div"}
-  (Session info: chrome=121.0.6167.87)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-37HMM6Q', ip: '169.254.123.185', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.87, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\mitra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38602}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7e9589582e1d85fd87b311a55539a41b
-*** Element info: {Using=xpath, value=//a[@id='cart-d']/div/div}
-	at jdk.internal.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at stepDefinition.AddToList.opens_shopping_cart(AddToList.java:47)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="stepDefinition.AddToList.clicks_add_to_list_link()">
+              <div class="step pass-bg" title="stepDefinition.AddToList.clicks_add_to_list_link()">
                 <span>And clicks add to List link</span>
-      <div>Step skipped
+      <div>
       </div>
               </div>
-              <div class="step skip-bg" title="stepDefinition.AddToList.sign_in_window_appears()">
+              <div class="step pass-bg" title="stepDefinition.AddToList.sign_in_window_appears()">
                 <span>Then Sign In window appears</span>
-      <div>Step skipped
+      <div>
       </div>
               </div>
           </div>
@@ -243,7 +161,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
           <div class="test-detail">
             <p class="name">feature to test Costco Homepage</p>
             <p class="text-sm">
-              <span>14:28:24 PM</span> / <span>00:29:395</span>
+              <span>22:08:24 PM</span> / <span>01:04:001</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -252,9 +170,9 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">feature to test Costco Homepage</h5>
-<span class='badge badge-success'>02.01.2024 14:28:24</span>
-<span class='badge badge-danger'>02.01.2024 14:28:54</span>
-<span class='badge badge-default'>00:29:395</span>
+<span class='badge badge-success'>02.01.2024 22:08:24</span>
+<span class='badge badge-danger'>02.01.2024 22:09:28</span>
+<span class='badge badge-default'>01:04:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -367,7 +285,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
           <div class="test-detail">
             <p class="name">Search box on Costco Homepage</p>
             <p class="text-sm">
-              <span>14:28:54 PM</span> / <span>00:08:859</span>
+              <span>22:09:28 PM</span> / <span>00:12:065</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -376,9 +294,9 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Search box on Costco Homepage</h5>
-<span class='badge badge-success'>02.01.2024 14:28:54</span>
-<span class='badge badge-danger'>02.01.2024 14:29:03</span>
-<span class='badge badge-default'>00:08:859</span>
+<span class='badge badge-success'>02.01.2024 22:09:28</span>
+<span class='badge badge-danger'>02.01.2024 22:09:40</span>
+<span class='badge badge-default'>00:12:065</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -426,6 +344,75 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </div>
           </div>
         </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">feature remove last item from cart</p>
+            <p class="text-sm">
+              <span>22:09:40 PM</span> / <span>00:49:237</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">feature remove last item from cart</h5>
+<span class='badge badge-success'>02.01.2024 22:09:40</span>
+<span class='badge badge-danger'>02.01.2024 22:10:30</span>
+<span class='badge badge-default'>00:49:237</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="34"><span class="badge log pass-bg mr-2">Pass</span>Validate remove last item from cart is working</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinition.RemoveLastItemFromCart.open_browser()">
+                <span>Given open browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.RemoveLastItemFromCart.user_is_on_costco_main_page()">
+                <span>And User is on costco main page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.RemoveLastItemFromCart.user_adds_the_product_to_the_cart()">
+                <span>When User adds the product to the cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.RemoveLastItemFromCart.shopping_cart_is_open()">
+                <span>And shopping cart is open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.RemoveLastItemFromCart.clicks_remove_link()">
+                <span>And clicks remove link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.RemoveLastItemFromCart.cart_is_empty()">
+                <span>Then cart is empty</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -435,59 +422,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>14:28:14 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='6'>And opens shopping cart</a>
-<div class="">
-<span class="badge badge-default">feature to add to wishlist.Validate add to wishlist link in the shopping cart is working.And opens shopping cart</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view category-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
@@ -519,7 +454,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>14:28:24 PM</td>
+<td>22:08:24 PM</td>
 <td>
 <a href="#" class="linked" test-id='9' id='10'>Validate all menu titles</a>
 <div class="">
@@ -529,7 +464,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>14:28:25 PM</td>
+<td>22:08:24 PM</td>
 <td>
 <a href="#" class="linked" test-id='9' id='11'>Validate all menu titles</a>
 <div class="">
@@ -539,7 +474,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>14:28:31 PM</td>
+<td>22:08:41 PM</td>
 <td>
 <a href="#" class="linked" test-id='9' id='16'>Validate all menu titles</a>
 <div class="">
@@ -549,7 +484,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>14:28:39 PM</td>
+<td>22:09:03 PM</td>
 <td>
 <a href="#" class="linked" test-id='9' id='21'>Validate all menu titles</a>
 <div class="">
@@ -574,25 +509,25 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 1, 2024 02:28:05 PM</h3>
+<h3>Feb 1, 2024 10:07:35 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 1, 2024 02:29:03 PM</h3>
+<h3>Feb 1, 2024 10:10:30 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>2</h3>
+<h3>4</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -608,12 +543,12 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='66%'>
-<b>2</b> features passed
+<div><small data-tooltip='100%'>
+<b>4</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='33%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -631,9 +566,9 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='80%'><b>4</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>6</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='20%'><b>1</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -651,10 +586,10 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='86%'><b>19</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>28</b> steps passed</small></div>
 <div>
-<small data-tooltip='4%'><b>1</b> steps failed,
-<b>2</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -670,7 +605,7 @@ Session ID: 7e9589582e1d85fd87b311a55539a41b
 </div></div>
 <script>
 var timeline = {
-"feature to add to wishlist":19.121,"feature to test Costco Homepage":29.395,"Search box on Costco Homepage":8.859
+"feature to add to wishlist":48.403,"feature to test Costco Homepage":64.001,"Search box on Costco Homepage":12.065,"feature remove last item from cart":49.237
 };
 </script>
 <div class="row">
@@ -696,21 +631,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 2,
-failParent: 1,
+passParent: 4,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 4,
-failChild: 1,
+passChild: 6,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 19,
-failGrandChild: 1,
+passGrandChild: 28,
+failGrandChild: 0,
 warningGrandChild: 0,
-skipGrandChild: 2,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
